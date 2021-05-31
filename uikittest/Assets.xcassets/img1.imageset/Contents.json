@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "src=http___img.39zn.cn_data_upload_ueditor_20210417_607ac072ac374.jpg&refer=http___img.39zn.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

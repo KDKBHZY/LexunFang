@@ -1,0 +1,30 @@
+PODS:
+  - JMTabBarKit (1.0.3)
+  - Masonry (1.0.2)
+  - MJRefresh (3.5.0)
+  - SDWebImage (5.9.0):
+    - SDWebImage/Core (= 5.9.0)
+  - SDWebImage/Core (5.9.0)
+
+DEPENDENCIES:
+  - JMTabBarKit (~> 1.0.2)
+  - Masonry (~> 1.0.1)
+  - MJRefresh
+  - SDWebImage
+
+SPEC REPOS:
+  trunk:
+    - JMTabBarKit
+    - Masonry
+    - MJRefresh
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  JMTabBarKit: 592317d17015b1462ca0627994da41fde068f8b5
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
+  SDWebImage: 62ae4a18473520c67b79e9724c31a63599cc9423
+
+PODFILE CHECKSUM: ba97867629ef2257c26b0f751568839a8153ca73
+
+COCOAPODS: 1.9.3
