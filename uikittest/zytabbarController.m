@@ -98,7 +98,7 @@
     
     UITapGestureRecognizer*cli = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(back)];
     [self.bgview addGestureRecognizer:cli];
-    NSLog(@"plus方法");
+    //NSLog(@"plus方法");
 }
 
 -(void)back{
