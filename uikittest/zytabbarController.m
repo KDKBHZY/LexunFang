@@ -11,8 +11,7 @@
 #import "findvcViewController.h"
 #import "mesvcViewController.h"
 #import "myvcViewController.h"
-#import "Buttonview.h"
-//#import "ButtonViewController.h"
+
 @interface zytabbarController ()<UITabBarControllerDelegate>
 
 @end
@@ -62,7 +61,7 @@
        [self addChildViewController:mesvc];
 
           myvcViewController* myvc = [[myvcViewController alloc] init];
-          [self setupOneChildViewController:myvc title:@"我的" col:UIColor.yellowColor image:@"wd" selectedImage:@"wd_selected"];
+          [self setupOneChildViewController:myvc title:@"我的" col:UIColor.whiteColor image:@"wd" selectedImage:@"wd_selected"];
        [self addChildViewController:myvc];
        //[self.window setRootViewController:tab];
 

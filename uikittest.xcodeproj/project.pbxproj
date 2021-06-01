@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8131616B264E4A0F009F9940 /* zytabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81316169264E1053009F9940 /* zytabbarController.m */; };
+		81529FCA2665C71500A84659 /* MeCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81529FC92665C71500A84659 /* MeCollectionReusableView.m */; };
+		81529FCD2665CB1600A84659 /* MeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81529FCC2665CB1600A84659 /* MeCollectionViewCell.m */; };
 		815D4A3F265BA7EA007A2AA4 /* myableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 815D4A3E265BA7EA007A2AA4 /* myableView.m */; };
 		81644E43264CBC280090A326 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81644E42264CBC280090A326 /* CollectionViewCell.m */; };
 		8164D71F264B7F4A004FA4AB /* homevc.m in Sources */ = {isa = PBXBuildFile; fileRef = 8164D71E264B7F4A004FA4AB /* homevc.m */; };
@@ -25,8 +27,6 @@
 		819EAEDB2657B5F600F589F1 /* JSHorizontalTopCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 819EAED42657B5F600F589F1 /* JSHorizontalTopCollectionViewCell.xib */; };
 		81C11B99265202270065B67F /* myCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C11B98265202270065B67F /* myCollectionViewCell.m */; };
 		81C11B9F26520AC50065B67F /* myCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C11B9E26520AC50065B67F /* myCollectionView.m */; };
-		81DCDD51265F893200D26669 /* Buttonview.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DCDD50265F893200D26669 /* Buttonview.m */; };
-		81DCDD54265F9A4C00D26669 /* ButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DCDD53265F9A4C00D26669 /* ButtonViewController.m */; };
 		81E950B8264A5FE70068E7CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E950B7264A5FE70068E7CE /* AppDelegate.m */; };
 		81E950BE264A5FE70068E7CE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E950BD264A5FE70068E7CE /* ViewController.m */; };
 		81E950C3264A5FE90068E7CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81E950C2264A5FE90068E7CE /* Assets.xcassets */; };
@@ -38,6 +38,10 @@
 		75CBF63F7BEEF0FB235507E3 /* Pods-uikittest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uikittest.release.xcconfig"; path = "Target Support Files/Pods-uikittest/Pods-uikittest.release.xcconfig"; sourceTree = "<group>"; };
 		81316168264E1053009F9940 /* zytabbarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zytabbarController.h; sourceTree = "<group>"; };
 		81316169264E1053009F9940 /* zytabbarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = zytabbarController.m; sourceTree = "<group>"; };
+		81529FC82665C71500A84659 /* MeCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeCollectionReusableView.h; sourceTree = "<group>"; };
+		81529FC92665C71500A84659 /* MeCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeCollectionReusableView.m; sourceTree = "<group>"; };
+		81529FCB2665CB1600A84659 /* MeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeCollectionViewCell.h; sourceTree = "<group>"; };
+		81529FCC2665CB1600A84659 /* MeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeCollectionViewCell.m; sourceTree = "<group>"; };
 		815D4A3D265BA7EA007A2AA4 /* myableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = myableView.h; sourceTree = "<group>"; };
 		815D4A3E265BA7EA007A2AA4 /* myableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myableView.m; sourceTree = "<group>"; };
 		81644E41264CBC280090A326 /* CollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
@@ -68,10 +72,6 @@
 		81C11B98265202270065B67F /* myCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myCollectionViewCell.m; sourceTree = "<group>"; };
 		81C11B9D26520AC50065B67F /* myCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = myCollectionView.h; sourceTree = "<group>"; };
 		81C11B9E26520AC50065B67F /* myCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myCollectionView.m; sourceTree = "<group>"; };
-		81DCDD4F265F893200D26669 /* Buttonview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Buttonview.h; sourceTree = "<group>"; };
-		81DCDD50265F893200D26669 /* Buttonview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Buttonview.m; sourceTree = "<group>"; };
-		81DCDD52265F9A4C00D26669 /* ButtonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtonViewController.h; sourceTree = "<group>"; };
-		81DCDD53265F9A4C00D26669 /* ButtonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ButtonViewController.m; sourceTree = "<group>"; };
 		81E950B3264A5FE70068E7CE /* uikittest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uikittest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E950B6264A5FE70068E7CE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		81E950B7264A5FE70068E7CE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -190,10 +190,10 @@
 				81E950C8264A5FE90068E7CE /* main.m */,
 				81316168264E1053009F9940 /* zytabbarController.h */,
 				81316169264E1053009F9940 /* zytabbarController.m */,
-				81DCDD4F265F893200D26669 /* Buttonview.h */,
-				81DCDD50265F893200D26669 /* Buttonview.m */,
-				81DCDD52265F9A4C00D26669 /* ButtonViewController.h */,
-				81DCDD53265F9A4C00D26669 /* ButtonViewController.m */,
+				81529FC82665C71500A84659 /* MeCollectionReusableView.h */,
+				81529FC92665C71500A84659 /* MeCollectionReusableView.m */,
+				81529FCB2665CB1600A84659 /* MeCollectionViewCell.h */,
+				81529FCC2665CB1600A84659 /* MeCollectionViewCell.m */,
 			);
 			path = uikittest;
 			sourceTree = "<group>";
@@ -328,19 +328,19 @@
 				8164D71F264B7F4A004FA4AB /* homevc.m in Sources */,
 				817E1791265CDDCE004AA1BD /* MyTableViewCell.m in Sources */,
 				819EAED82657B5F600F589F1 /* JSHorizontalBottomCollectionViewCell.m in Sources */,
-				81DCDD54265F9A4C00D26669 /* ButtonViewController.m in Sources */,
 				815D4A3F265BA7EA007A2AA4 /* myableView.m in Sources */,
 				81C11B99265202270065B67F /* myCollectionViewCell.m in Sources */,
 				81C11B9F26520AC50065B67F /* myCollectionView.m in Sources */,
 				81E950B8264A5FE70068E7CE /* AppDelegate.m in Sources */,
+				81529FCA2665C71500A84659 /* MeCollectionReusableView.m in Sources */,
 				8164D726264BB435004FA4AB /* mesvcViewController.m in Sources */,
 				819EAED92657B5F600F589F1 /* JSHorizontalTopCollectionViewCell.m in Sources */,
+				81529FCD2665CB1600A84659 /* MeCollectionViewCell.m in Sources */,
 				8164D72C264BC34A004FA4AB /* LoopPlayView.m in Sources */,
 				8131616B264E4A0F009F9940 /* zytabbarController.m in Sources */,
 				81644E43264CBC280090A326 /* CollectionViewCell.m in Sources */,
 				8164D723264BB41E004FA4AB /* findvcViewController.m in Sources */,
 				81E950C9264A5FE90068E7CE /* main.m in Sources */,
-				81DCDD51265F893200D26669 /* Buttonview.m in Sources */,
 				8164D729264BB441004FA4AB /* myvcViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

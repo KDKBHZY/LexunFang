@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface myvcViewController : UIViewController
-
+@property UIScrollView*scro;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -7,15 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Buttonview.h"
-#import "ButtonViewController.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface zytabbarController : UITabBarController
 @property(nonatomic,strong) UIButton* centbut;
-@property Buttonview * btc;
-//@property ButtonViewController * btcv;
+
 @property   UIVisualEffectView *bgview;
 @property  UIButton*bnt4;
 @property  UIButton*bnt3;
