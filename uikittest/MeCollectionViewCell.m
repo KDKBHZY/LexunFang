@@ -26,22 +26,21 @@
     [self.contentView addSubview:self.iconimage];
 
     [self.iconimage mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.mas_equalTo(30);
+        make.width.mas_equalTo(80);
 
-               make.height.mas_equalTo(30);
+               make.height.mas_equalTo(80);
         make.top.and.left.mas_equalTo(10.0);
-        //make.right.mas_equalTo(-10.0);
-      
+       
     }];
-    self.iconimage.backgroundColor = [UIColor blueColor];
-        self.iconimage.contentMode = UIViewContentModeScaleAspectFit;
+    //必须添加这个属性才可以圆角
+    self.iconimage.layer.masksToBounds = YES;
+    self.iconimage.layer.cornerRadius = 40 ;
     
     self.namelabel = [[UILabel alloc] init];
     [self.contentView addSubview:self.namelabel];
-    UIView*currentview = self.iconimage;
     [self.namelabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(10.0);
-        make.left.mas_equalTo(currentview.mas_right);
+        make.left.mas_equalTo(self.iconimage.mas_right);
         make.right.mas_equalTo(0);
         make.height.mas_equalTo(20);
         //make.width.mas_equalTo(50);

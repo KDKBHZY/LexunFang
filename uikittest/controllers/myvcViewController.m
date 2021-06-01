@@ -28,10 +28,9 @@
     UICollectionViewFlowLayout*layout = [[UICollectionViewFlowLayout alloc] init];
     [layout setScrollDirection:UICollectionViewScrollDirectionVertical];
       
-    UICollectionView *collectionview = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 800) collectionViewLayout:layout];
-//    [collectionview mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.edges.mas_equalTo(self.scro);
-//    }];
+    UICollectionView *collectionview = [[UICollectionView alloc] initWithFrame:CGRectMake(0, -70, self.view.bounds.size.width, 800) collectionViewLayout:layout];
+    [self.scro addSubview:collectionview];
+
     collectionview.delegate = self;
     collectionview.dataSource = self;
     collectionview.allowsSelection = YES;
@@ -40,7 +39,6 @@
     [collectionview registerClass:[MeCollectionViewCell class] forCellWithReuseIdentifier:@"cellid"];
     //注册header
     [collectionview registerClass:[MeCollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"CollectionHeaderView"];
-    [self.scro addSubview:collectionview];
 
 }
 
@@ -48,35 +46,41 @@
 
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     MeCollectionViewCell*cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellid" forIndexPath:indexPath];
-    cell.iconimage.image = [UIImage imageNamed:@"crown (1)"];
+    cell.iconimage.image = [UIImage imageNamed:@"img1"];
+    
     cell.namelabel.text = @"vdfb";
     return cell;
 }
 
 - (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 5;
+    return 1;
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
-    
-    MeCollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"CollectionHeaderView" forIndexPath:indexPath];
-        
-    headerView.titlelabel.text = @"我的";
-        
-        return headerView;
+   
+        MeCollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"CollectionHeaderView" forIndexPath:indexPath];
+     if(indexPath.section==0){
+         headerView.frame = CGRectZero;
+     }else{
+         headerView.titlelabel.text = @"我的";
+
+     }
+
+    return headerView;
+
 }
 
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    NSInteger count = 3;
+    NSInteger count = 6;
     return count;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(UIScreen.mainScreen.bounds.size.width, 90);
+    return CGSizeMake(UIScreen.mainScreen.bounds.size.width, 190);
 }
  
 
