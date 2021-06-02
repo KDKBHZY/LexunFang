@@ -17,6 +17,8 @@
               self.dataSource = self;
         //禁止tablevie滚动
         self.scrollEnabled = NO;
+        self.allowsSelection = NO;
+        self.allowsSelectionDuringEditing = NO;
         
     }
     return self;
@@ -44,6 +46,8 @@
     cell.nametext.text = [arr objectAtIndex:indexPath.section];
     cell.slogan.text = @"翘起地球的动态";
     cell.icon.image = [UIImage imageNamed:@"my1"];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
     return cell;;
 }
 

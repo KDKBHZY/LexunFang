@@ -179,6 +179,19 @@
         MeCollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"CollectionHeaderView" forIndexPath:indexPath];
      if(indexPath.section==0){
          headerView.frame = CGRectZero;
+     }else if(indexPath.section == 1){
+         headerView.titlelabel.text = [self.arr objectAtIndex:indexPath.section];
+         headerView.titlelabel.textColor =  [UIColor blackColor];
+         
+         UILabel * l1 = [[UILabel alloc] init];
+         l1.text = @"本月预估收益: 0 蜂金";
+         l1.font = [UIFont systemFontOfSize:14];
+         l1.textColor = [UIColor lightGrayColor];
+         [headerView addSubview:l1];
+          [l1 mas_makeConstraints:^(MASConstraintMaker *make) {
+              make.right.mas_equalTo(0);
+              make.width.mas_equalTo(150);
+         }];
      }else{
          headerView.titlelabel.text = [self.arr objectAtIndex:indexPath.section];
           headerView.titlelabel.textColor = [UIColor blackColor];
@@ -198,8 +211,11 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section == 1 ||  indexPath.section == 2) {
-            return CGSizeMake(UIScreen.mainScreen.bounds.size.width, 80);
+    if (indexPath.section == 1 ) {
+            return CGSizeMake(UIScreen.mainScreen.bounds.size.width, 60);
+
+    }else if(indexPath.section == 2){
+        return CGSizeMake(UIScreen.mainScreen.bounds.size.width, 100);
 
     }
     else{
