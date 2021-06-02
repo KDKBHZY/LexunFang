@@ -10,6 +10,7 @@
 		8131616B264E4A0F009F9940 /* zytabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81316169264E1053009F9940 /* zytabbarController.m */; };
 		81529FCA2665C71500A84659 /* MeCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81529FC92665C71500A84659 /* MeCollectionReusableView.m */; };
 		81529FCD2665CB1600A84659 /* MeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81529FCC2665CB1600A84659 /* MeCollectionViewCell.m */; };
+		81529FD02666334F00A84659 /* Followbtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 81529FCF2666334F00A84659 /* Followbtn.m */; };
 		815D4A3F265BA7EA007A2AA4 /* myableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 815D4A3E265BA7EA007A2AA4 /* myableView.m */; };
 		81644E43264CBC280090A326 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81644E42264CBC280090A326 /* CollectionViewCell.m */; };
 		8164D71F264B7F4A004FA4AB /* homevc.m in Sources */ = {isa = PBXBuildFile; fileRef = 8164D71E264B7F4A004FA4AB /* homevc.m */; };
@@ -42,6 +43,8 @@
 		81529FC92665C71500A84659 /* MeCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeCollectionReusableView.m; sourceTree = "<group>"; };
 		81529FCB2665CB1600A84659 /* MeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeCollectionViewCell.h; sourceTree = "<group>"; };
 		81529FCC2665CB1600A84659 /* MeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeCollectionViewCell.m; sourceTree = "<group>"; };
+		81529FCE2666334F00A84659 /* Followbtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Followbtn.h; sourceTree = "<group>"; };
+		81529FCF2666334F00A84659 /* Followbtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Followbtn.m; sourceTree = "<group>"; };
 		815D4A3D265BA7EA007A2AA4 /* myableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = myableView.h; sourceTree = "<group>"; };
 		815D4A3E265BA7EA007A2AA4 /* myableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myableView.m; sourceTree = "<group>"; };
 		81644E41264CBC280090A326 /* CollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
@@ -194,6 +197,8 @@
 				81529FC92665C71500A84659 /* MeCollectionReusableView.m */,
 				81529FCB2665CB1600A84659 /* MeCollectionViewCell.h */,
 				81529FCC2665CB1600A84659 /* MeCollectionViewCell.m */,
+				81529FCE2666334F00A84659 /* Followbtn.h */,
+				81529FCF2666334F00A84659 /* Followbtn.m */,
 			);
 			path = uikittest;
 			sourceTree = "<group>";
@@ -340,6 +345,7 @@
 				8131616B264E4A0F009F9940 /* zytabbarController.m in Sources */,
 				81644E43264CBC280090A326 /* CollectionViewCell.m in Sources */,
 				8164D723264BB41E004FA4AB /* findvcViewController.m in Sources */,
+				81529FD02666334F00A84659 /* Followbtn.m in Sources */,
 				81E950C9264A5FE90068E7CE /* main.m in Sources */,
 				8164D729264BB441004FA4AB /* myvcViewController.m in Sources */,
 			);

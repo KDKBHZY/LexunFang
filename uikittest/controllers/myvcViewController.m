@@ -17,38 +17,50 @@
 @implementation myvcViewController
 
 - (void)viewDidLoad {
+    [self setupui];
+    self.arr = @[@"",@"我的钱包",@"返利合伙人",@"乐寻互动",@"招聘合伙人",@"我的工具"];
+        
+}
+
+-(void) setupui{
     self.scro = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 44, UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.height-127)];
-    
-    
-    [self.view addSubview:self.scro];
-    [self.scro mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view);
-    }];
-    [super viewDidLoad];
-    UICollectionViewFlowLayout*layout = [[UICollectionViewFlowLayout alloc] init];
-    [layout setScrollDirection:UICollectionViewScrollDirectionVertical];
-      
-    UICollectionView *collectionview = [[UICollectionView alloc] initWithFrame:CGRectMake(0, -70, self.view.bounds.size.width, 800) collectionViewLayout:layout];
-    [self.scro addSubview:collectionview];
+       
+       
+       [self.view addSubview:self.scro];
+       [self.scro mas_makeConstraints:^(MASConstraintMaker *make) {
+           make.edges.equalTo(self.view);
+       }];
+       [super viewDidLoad];
+       UICollectionViewFlowLayout*layout = [[UICollectionViewFlowLayout alloc] init];
+       [layout setScrollDirection:UICollectionViewScrollDirectionVertical];
+         
+       UICollectionView *collectionview = [[UICollectionView alloc] initWithFrame:CGRectMake(0, -80, self.view.bounds.size.width, 800) collectionViewLayout:layout];
+       [self.scro addSubview:collectionview];
 
-    collectionview.delegate = self;
-    collectionview.dataSource = self;
-    collectionview.allowsSelection = YES;
-    collectionview.backgroundColor = [UIColor whiteColor];
-    //注册cell
-    [collectionview registerClass:[MeCollectionViewCell class] forCellWithReuseIdentifier:@"cellid"];
-    //注册header
-    [collectionview registerClass:[MeCollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"CollectionHeaderView"];
-
+       collectionview.delegate = self;
+       collectionview.dataSource = self;
+       collectionview.allowsSelection = YES;
+       collectionview.backgroundColor = [UIColor whiteColor];
+       //注册cell
+       [collectionview registerClass:[MeCollectionViewCell class] forCellWithReuseIdentifier:@"cellid"];
+       //注册header
+       [collectionview registerClass:[MeCollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"CollectionHeaderView"];
 }
 
 
 
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     MeCollectionViewCell*cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellid" forIndexPath:indexPath];
-    cell.iconimage.image = [UIImage imageNamed:@"img1"];
-    
-    cell.namelabel.text = @"vdfb";
+    if(indexPath.section == 0){
+        cell.iconimage.image = [UIImage imageNamed:@"icon"];
+          cell.gradelabel.backgroundColor = [UIColor lightGrayColor];
+        [cell.daybutton setTitle:@"已签0天" forState:UIControlStateNormal];
+          cell.daybutton.layer.cornerRadius = 15;
+           cell.daybutton.backgroundColor = [UIColor systemYellowColor];
+              cell.gradelabel.text = @"信用等级";
+           cell.namelabel.text = @"nuorz_9635";
+    }
+   
     return cell;
 }
 
@@ -63,7 +75,7 @@
      if(indexPath.section==0){
          headerView.frame = CGRectZero;
      }else{
-         headerView.titlelabel.text = @"我的";
+         headerView.titlelabel.text = [self.arr objectAtIndex:indexPath.section];
 
      }
 
