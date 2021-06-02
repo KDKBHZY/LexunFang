@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface myvcViewController : UIViewController
 @property UIScrollView*scro;
 @property NSArray*arr;
+@property  UICollectionView *collectionview ;
 @end
 
 NS_ASSUME_NONNULL_END

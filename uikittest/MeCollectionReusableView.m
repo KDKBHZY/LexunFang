@@ -27,6 +27,6 @@
         make.left.mas_equalTo(10.0);
     }];
     self.titlelabel.textAlignment = NSTextAlignmentLeft;
-    self.titlelabel.textColor = [UIColor redColor];
+    self.titlelabel.textColor = [UIColor blackColor];
 }
 @end

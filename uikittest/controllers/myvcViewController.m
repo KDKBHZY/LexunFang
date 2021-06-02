@@ -34,17 +34,17 @@
        UICollectionViewFlowLayout*layout = [[UICollectionViewFlowLayout alloc] init];
        [layout setScrollDirection:UICollectionViewScrollDirectionVertical];
          
-       UICollectionView *collectionview = [[UICollectionView alloc] initWithFrame:CGRectMake(0, -80, self.view.bounds.size.width, 800) collectionViewLayout:layout];
-       [self.scro addSubview:collectionview];
+    self.collectionview = [[UICollectionView alloc] initWithFrame:CGRectMake(0, -80, self.view.bounds.size.width, 800) collectionViewLayout:layout];
+    [self.scro addSubview:self.collectionview];
 
-       collectionview.delegate = self;
-       collectionview.dataSource = self;
-       collectionview.allowsSelection = YES;
-       collectionview.backgroundColor = [UIColor whiteColor];
+    self.collectionview.delegate = self;
+       self.collectionview.dataSource = self;
+        self.collectionview.allowsSelection = YES;
+        self.collectionview.backgroundColor = [UIColor whiteColor];
        //注册cell
-       [collectionview registerClass:[MeCollectionViewCell class] forCellWithReuseIdentifier:@"cellid"];
+       [ self.collectionview registerClass:[MeCollectionViewCell class] forCellWithReuseIdentifier:@"cellid"];
        //注册header
-       [collectionview registerClass:[MeCollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"CollectionHeaderView"];
+       [ self.collectionview registerClass:[MeCollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"CollectionHeaderView"];
 }
 
 
@@ -68,10 +68,10 @@
         cell.follow1.typelabel.text = @"关注";
         cell.follow2.typelabel.text = @"粉丝";
         cell.follow3.typelabel.text = @"收藏";
-        UIButton*btn = [[UIButton alloc] initWithFrame:CGRectMake(10, 200, self.view.bounds.size.width-20, 64)];
+        UIButton*btn = [[UIButton alloc] initWithFrame:CGRectMake(10, 220, self.view.bounds.size.width-20, 64)];
        // btn.imageView.image = [UIImage imageNamed:@"today"];
         [btn setImage:[UIImage imageNamed:@"today"] forState:UIControlStateNormal];
-        [self.view addSubview:btn];
+        [self.collectionview addSubview:btn];
     }
    
     return cell;
@@ -89,6 +89,7 @@
          headerView.frame = CGRectZero;
      }else{
          headerView.titlelabel.text = [self.arr objectAtIndex:indexPath.section];
+          headerView.titlelabel.textColor = [UIColor blackColor];
 
      }
 
