@@ -51,6 +51,7 @@
 
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     MeCollectionViewCell*cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellid" forIndexPath:indexPath];
+    //分行进行布局
     if(indexPath.section == 0){
         cell.iconimage.image = [UIImage imageNamed:@"icon"];
           cell.gradelabel.backgroundColor = [UIColor lightGrayColor];
@@ -63,14 +64,14 @@
         cell.follow1.numlabel.text = @"0";
         cell.follow2.numlabel.text = @"0";
         cell.follow3.numlabel.text = @"0";
-        
         cell.follow.typelabel.text = @"获赞";
         cell.follow1.typelabel.text = @"关注";
         cell.follow2.typelabel.text = @"粉丝";
         cell.follow3.typelabel.text = @"收藏";
-
-
-
+        UIButton*btn = [[UIButton alloc] initWithFrame:CGRectMake(10, 200, self.view.bounds.size.width-20, 64)];
+       // btn.imageView.image = [UIImage imageNamed:@"today"];
+        [btn setImage:[UIImage imageNamed:@"today"] forState:UIControlStateNormal];
+        [self.view addSubview:btn];
     }
    
     return cell;
