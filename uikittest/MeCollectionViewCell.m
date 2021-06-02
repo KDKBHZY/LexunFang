@@ -75,7 +75,8 @@
         make.width.mas_equalTo(100);
         make.height.mas_equalTo(30);
     }];
-    self.daybutton.tintColor = [UIColor blackColor];
+     
+     [self.daybutton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     
     //添加相关
     self.follow = [[Followbtn alloc] init];
@@ -87,6 +88,9 @@
         make.height.mas_equalTo(50);
     }];
     
+    self.follow.numlabel.font = [UIFont systemFontOfSize:16];
+    self.follow.typelabel.font = [UIFont systemFontOfSize:16];
+    
      self.follow1 = [[Followbtn alloc] init];
        [self.contentView addSubview:self.follow1];
        [self.follow1 mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -95,7 +99,8 @@
            make.width.mas_equalTo(50);
            make.height.mas_equalTo(50);
        }];
-    self.follow1.typelabel.text = @"关注";
+    self.follow1.numlabel.font = [UIFont systemFontOfSize:16];
+    self.follow1.typelabel.font = [UIFont systemFontOfSize:16];
 
     
      self.follow2 = [[Followbtn alloc] init];
@@ -106,7 +111,8 @@
            make.width.mas_equalTo(50);
            make.height.mas_equalTo(50);
        }];
-    self.follow2.typelabel.text = @"粉丝";
+    self.follow2.numlabel.font = [UIFont systemFontOfSize:16];
+    self.follow2.typelabel.font = [UIFont systemFontOfSize:16];
     
      self.follow3 = [[Followbtn alloc] init];
        [self.contentView addSubview:self.follow3];
@@ -116,7 +122,8 @@
            make.width.mas_equalTo(50);
            make.height.mas_equalTo(50);
        }];
-    self.follow3.typelabel.text = @"收藏";
+    self.follow3.numlabel.font = [UIFont systemFontOfSize:16];
+    self.follow3.typelabel.font = [UIFont systemFontOfSize:16];
 
 }
 @end

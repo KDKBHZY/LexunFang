@@ -59,6 +59,18 @@
            cell.daybutton.backgroundColor = [UIColor systemYellowColor];
               cell.gradelabel.text = @"信用等级";
            cell.namelabel.text = @"nuorz_9635";
+        cell.follow.numlabel.text = @"0";
+        cell.follow1.numlabel.text = @"0";
+        cell.follow2.numlabel.text = @"0";
+        cell.follow3.numlabel.text = @"0";
+        
+        cell.follow.typelabel.text = @"获赞";
+        cell.follow1.typelabel.text = @"关注";
+        cell.follow2.typelabel.text = @"粉丝";
+        cell.follow3.typelabel.text = @"收藏";
+
+
+
     }
    
     return cell;
