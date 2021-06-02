@@ -27,7 +27,8 @@
         self.typelabel.textAlignment = NSTextAlignmentCenter;
         self.numlabel.textAlignment = NSTextAlignmentCenter;
 
-        self.tintColor = [UIColor blackColor];
+        self.numlabel.textColor = [UIColor blackColor];
+        self.typelabel.textColor = [UIColor lightGrayColor];
         self.numlabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, 20, 20)];
         self.numlabel.text = @"";
         [self addSubview:self.numlabel ];

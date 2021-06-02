@@ -14,8 +14,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-//        self.layer.borderWidth = 0.5;
-//        self.layer.borderColor = [UIColor redColor].CGColor;
+
         [self setupui];
     }
     return self;
@@ -87,7 +86,7 @@
         make.width.mas_equalTo(50);
         make.height.mas_equalTo(50);
     }];
-    
+    self.follow.typelabel.textColor = [UIColor grayColor];
     self.follow.numlabel.font = [UIFont systemFontOfSize:16];
     self.follow.typelabel.font = [UIFont systemFontOfSize:16];
     
@@ -95,35 +94,39 @@
        [self.contentView addSubview:self.follow1];
        [self.follow1 mas_makeConstraints:^(MASConstraintMaker *make) {
            make.top.equalTo(self.gradelabel.mas_bottom).offset(20);
-    make.left.mas_equalTo(self.follow.mas_right).offset(40);
+    make.left.mas_equalTo(self.follow.mas_right).offset(35);
            make.width.mas_equalTo(50);
            make.height.mas_equalTo(50);
        }];
     self.follow1.numlabel.font = [UIFont systemFontOfSize:16];
     self.follow1.typelabel.font = [UIFont systemFontOfSize:16];
+    self.follow1.typelabel.textColor = [UIColor grayColor];
 
     
      self.follow2 = [[Followbtn alloc] init];
        [self.contentView addSubview:self.follow2];
        [self.follow2 mas_makeConstraints:^(MASConstraintMaker *make) {
            make.top.equalTo(self.gradelabel.mas_bottom).offset(20);
-    make.left.mas_equalTo(self.follow1.mas_right).offset(40);
+    make.left.mas_equalTo(self.follow1.mas_right).offset(35);
            make.width.mas_equalTo(50);
            make.height.mas_equalTo(50);
        }];
     self.follow2.numlabel.font = [UIFont systemFontOfSize:16];
     self.follow2.typelabel.font = [UIFont systemFontOfSize:16];
+    self.follow2.typelabel.textColor = [UIColor grayColor];
+
     
      self.follow3 = [[Followbtn alloc] init];
        [self.contentView addSubview:self.follow3];
        [self.follow3 mas_makeConstraints:^(MASConstraintMaker *make) {
            make.top.equalTo(self.gradelabel.mas_bottom).offset(20);
-    make.left.mas_equalTo(self.follow2.mas_right).offset(40);
+    make.left.mas_equalTo(self.follow2.mas_right).offset(35);
            make.width.mas_equalTo(50);
            make.height.mas_equalTo(50);
        }];
     self.follow3.numlabel.font = [UIFont systemFontOfSize:16];
     self.follow3.typelabel.font = [UIFont systemFontOfSize:16];
+    self.follow3.typelabel.textColor = [UIColor grayColor];
 
 }
 @end
