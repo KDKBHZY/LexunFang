@@ -29,7 +29,7 @@
 
         self.numlabel.textColor = [UIColor blackColor];
         self.typelabel.textColor = [UIColor lightGrayColor];
-        self.numlabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, 20, 20)];
+        self.numlabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, 50, 20)];
         self.numlabel.text = @"";
         [self addSubview:self.numlabel ];
         self.typelabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 25, 40, 20)];

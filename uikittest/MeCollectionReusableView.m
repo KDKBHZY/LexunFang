@@ -24,9 +24,10 @@
 
     [self.titlelabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.and.bottom.mas_equalTo(0);
-        make.left.mas_equalTo(10.0);
+        make.left.mas_equalTo(20.0);
     }];
     self.titlelabel.textAlignment = NSTextAlignmentLeft;
     self.titlelabel.textColor = [UIColor redColor];
+    self.titlelabel.font = [UIFont systemFontOfSize:20];
 }
 @end

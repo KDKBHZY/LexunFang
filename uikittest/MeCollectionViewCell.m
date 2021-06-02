@@ -94,7 +94,7 @@
        [self.contentView addSubview:self.follow1];
        [self.follow1 mas_makeConstraints:^(MASConstraintMaker *make) {
            make.top.equalTo(self.gradelabel.mas_bottom).offset(20);
-    make.left.mas_equalTo(self.follow.mas_right).offset(35);
+           make.left.mas_equalTo(self.follow.mas_right).offset(35).priorityLow;
            make.width.mas_equalTo(50);
            make.height.mas_equalTo(50);
        }];
