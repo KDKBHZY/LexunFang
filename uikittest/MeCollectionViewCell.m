@@ -80,7 +80,7 @@
     //添加相关
     self.follow = [[Followbtn alloc] init];
     [self.contentView addSubview:self.follow];
-    [self.follow mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.follow mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.gradelabel.mas_bottom).offset(20);
  make.left.mas_equalTo(self.iconimage.mas_right).offset(-50);
         make.width.mas_equalTo(50);
@@ -92,9 +92,9 @@
     
      self.follow1 = [[Followbtn alloc] init];
        [self.contentView addSubview:self.follow1];
-       [self.follow1 mas_makeConstraints:^(MASConstraintMaker *make) {
+       [self.follow1 mas_remakeConstraints:^(MASConstraintMaker *make) {
            make.top.equalTo(self.gradelabel.mas_bottom).offset(20);
-           make.left.mas_equalTo(self.follow.mas_right).offset(35).priorityLow;
+           make.left.mas_equalTo(self.follow.mas_right).offset(35);
            make.width.mas_equalTo(50);
            make.height.mas_equalTo(50);
        }];
@@ -105,7 +105,7 @@
     
      self.follow2 = [[Followbtn alloc] init];
        [self.contentView addSubview:self.follow2];
-       [self.follow2 mas_makeConstraints:^(MASConstraintMaker *make) {
+       [self.follow2 mas_remakeConstraints:^(MASConstraintMaker *make) {
            make.top.equalTo(self.gradelabel.mas_bottom).offset(20);
     make.left.mas_equalTo(self.follow1.mas_right).offset(35);
            make.width.mas_equalTo(50);
@@ -118,7 +118,7 @@
     
      self.follow3 = [[Followbtn alloc] init];
        [self.contentView addSubview:self.follow3];
-       [self.follow3 mas_makeConstraints:^(MASConstraintMaker *make) {
+       [self.follow3 mas_remakeConstraints:^(MASConstraintMaker *make) {
            make.top.equalTo(self.gradelabel.mas_bottom).offset(20);
     make.left.mas_equalTo(self.follow2.mas_right).offset(35);
            make.width.mas_equalTo(50);

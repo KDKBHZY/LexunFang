@@ -10,6 +10,7 @@
 #import <Masonry/Masonry.h>
 #import "MeCollectionViewCell.h"
 #import "MeCollectionReusableView.h"
+
 @interface myvcViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @end
@@ -41,8 +42,10 @@
         self.collectionview.backgroundColor = [UIColor whiteColor];
        //注册cell
        [ self.collectionview registerClass:[MeCollectionViewCell class] forCellWithReuseIdentifier:@"cellid"];
+     
        //注册header
        [ self.collectionview registerClass:[MeCollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"CollectionHeaderView"];
+    
 }
 
 
@@ -69,8 +72,7 @@
         UIButton*btn = [[UIButton alloc] init];
         [btn setImage:[UIImage imageNamed:@"today"] forState:UIControlStateNormal];
         [self.collectionview addSubview:btn];
-        [btn mas_makeConstraints:^(MASConstraintMaker *make) {
-           // make.top.equalTo(cell.follow.mas_bottom).offset(10);
+        [btn mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(190);
             make.left.mas_equalTo(10.0);
             make.height.mas_equalTo(64.0);
@@ -78,10 +80,12 @@
         }];
     }
     if (indexPath.section == 1) {
+       
         //整体按钮的位置
         [cell.follow mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(10);
         }];
+        //重新布局要用remake
         [cell.follow1 mas_remakeConstraints:^(MASConstraintMaker *make) {
                    make.top.mas_equalTo(10);
             make.left.mas_equalTo(cell.follow.mas_right).offset(70);
@@ -120,6 +124,47 @@
               cell.follow2.numlabel.font = [UIFont systemFontOfSize:18];
 
     }
+    if (indexPath.section == 2) {
+     UIButton*btn = [[UIButton alloc] init];
+         [btn setImage:[UIImage imageNamed:@"fanli1"] forState:UIControlStateNormal];
+        [cell addSubview:btn];
+         [btn mas_remakeConstraints:^(MASConstraintMaker *make) {
+             make.top.mas_equalTo(10);
+             make.left.mas_equalTo(20.0);
+             make.height.mas_equalTo(64.0);
+             make.width.mas_equalTo(64.0);
+         }];
+        
+        UIButton*btn1 = [[UIButton alloc] init];
+                [btn1 setImage:[UIImage imageNamed:@"fanli2"] forState:UIControlStateNormal];
+               [cell addSubview:btn1];
+                [btn1 mas_remakeConstraints:^(MASConstraintMaker *make) {
+                    make.top.mas_equalTo(10);
+                    make.left.mas_equalTo(btn.mas_right).offset(30);
+                    make.height.mas_equalTo(64.0);
+                    make.width.mas_equalTo(64.0);
+                }];
+        
+    UIButton*btn2 = [[UIButton alloc] init];
+            [btn2 setImage:[UIImage imageNamed:@"fanli3"] forState:UIControlStateNormal];
+           [cell addSubview:btn2];
+            [btn2 mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.top.mas_equalTo(10);
+                make.left.mas_equalTo(btn1.mas_right).offset(30);
+                make.height.mas_equalTo(64.0);
+                make.width.mas_equalTo(64.0);
+            }];
+        
+        UIButton*btn3 = [[UIButton alloc] init];
+                [btn3 setImage:[UIImage imageNamed:@"fanli4"] forState:UIControlStateNormal];
+               [cell addSubview:btn3];
+                [btn3 mas_remakeConstraints:^(MASConstraintMaker *make) {
+                    make.top.mas_equalTo(10);
+                    make.left.mas_equalTo(btn2.mas_right).offset(30);
+                    make.height.mas_equalTo(64.0);
+                    make.width.mas_equalTo(64.0);
+                }];
+    }
    
     return cell;
 }
@@ -153,8 +198,8 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section == 1) {
-            return CGSizeMake(UIScreen.mainScreen.bounds.size.width, 100);
+    if (indexPath.section == 1 ||  indexPath.section == 2) {
+            return CGSizeMake(UIScreen.mainScreen.bounds.size.width, 80);
 
     }
     else{
@@ -166,7 +211,13 @@
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
-    return UIEdgeInsetsMake(20.0, 20.0, 40.0, 10.0);
+    if (section == 0) {
+            return UIEdgeInsetsMake(20.0, 20.0, 40.0, 10.0);
+
+    }else{
+        return UIEdgeInsetsMake(10.0, 20.0, 20.0, 10.0);
+
+    }
 }
 
 // 设定头部标题的尺寸
