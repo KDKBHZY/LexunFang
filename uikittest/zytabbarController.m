@@ -103,6 +103,46 @@
 -(void)back{
       
                  
+                 [UIView animateWithDuration:0.2 animations:^{
+                         self.bnt4.frame =CGRectMake(290, UIScreen.mainScreen.bounds.size.height+100, 60,60);
+
+                     //第二个
+                          dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                              [UIView animateWithDuration:0.2 animations:^{
+                                  self.bnt3.frame =CGRectMake(200, UIScreen.mainScreen.bounds.size.height+100, 60,60);
+
+                              }];
+                              
+                          });
+                     //第三个
+                          dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                              [UIView animateWithDuration:0.2 animations:^{
+                                  
+                                  self.bnt2.frame =CGRectMake(110, UIScreen.mainScreen.bounds.size.height+190, 60,60);
+                               
+                              }];
+                              
+                          });
+                             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.6 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                                      [UIView animateWithDuration:0.2 animations:^{
+                                         
+                                          self.bnt1.frame = CGRectMake(20, UIScreen.mainScreen.bounds.size.height, 60,60);
+                                          
+                                             
+
+                                           
+                                      }];
+                                      
+                                  });
+                     //最后一个view
+                     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                                             [UIView animateWithDuration:0.2 animations:^{
+                                                 self.bgview.frame = CGRectMake(0, UIScreen.mainScreen.bounds.size.height+100, UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.height);
+                         }];
+                     });
+                      
+                 }];
+                 
             
                      
 }
