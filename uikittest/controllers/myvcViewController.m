@@ -18,23 +18,24 @@
 @implementation myvcViewController
 
 - (void)viewDidLoad {
+      [super viewDidLoad];
+
     [self setupui];
     self.arr = @[@"",@"我的钱包",@"返利合伙人",@"乐寻互动",@"招聘合伙人",@"我的工具"];
 }
 
 -(void) setupui{
-    self.scro = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 44, UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.height-127)];
-    //一定要先添加再用masonry布局
-       [self.view addSubview:self.scro];
-       [self.scro mas_makeConstraints:^(MASConstraintMaker *make) {
-           make.edges.equalTo(self.view);
-       }];
-       [super viewDidLoad];
+//    self.scro = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 44, UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.height-127)];
+//    //一定要先添加再用masonry布局
+//       [self.view addSubview:self.scro];
+//       [self.scro mas_makeConstraints:^(MASConstraintMaker *make) {
+//           make.edges.equalTo(self.view);
+//       }];
        UICollectionViewFlowLayout*layout = [[UICollectionViewFlowLayout alloc] init];
        [layout setScrollDirection:UICollectionViewScrollDirectionVertical];
          
-    self.collectionview = [[UICollectionView alloc] initWithFrame:CGRectMake(0, -40, self.view.bounds.size.width, 800) collectionViewLayout:layout];
-    [self.scro addSubview:self.collectionview];
+    self.collectionview = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 33, self.view.bounds.size.width, 800) collectionViewLayout:layout];
+    [self.view addSubview:self.collectionview];
 
     self.collectionview.delegate = self;
        self.collectionview.dataSource = self;
@@ -72,9 +73,9 @@
         cell.follow3.typelabel.text = @"收藏";
         UIButton*btn = [[UIButton alloc] init];
         [btn setImage:[UIImage imageNamed:@"today"] forState:UIControlStateNormal];
-        [self.collectionview addSubview:btn];
+        [cell addSubview:btn];
         [btn mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.top.mas_equalTo(190);
+            make.top.mas_equalTo(cell.follow.mas_bottom).offset(5);
             make.left.mas_equalTo(10.0);
             make.height.mas_equalTo(64.0);
             make.width.mas_equalTo(self.view.bounds.size.width-20);
@@ -282,6 +283,7 @@
           [l1 mas_makeConstraints:^(MASConstraintMaker *make) {
               make.right.mas_equalTo(0);
               make.width.mas_equalTo(150);
+              make.top.mas_equalTo(1);
          }];
      }else{
          headerView.titlelabel.text = [self.arr objectAtIndex:indexPath.section];
@@ -312,7 +314,7 @@
     else if(indexPath.section == 3){
          return CGSizeMake(UIScreen.mainScreen.bounds.size.width, 200);
     }else{
-        return CGSizeMake(UIScreen.mainScreen.bounds.size.width, 190);
+        return CGSizeMake(UIScreen.mainScreen.bounds.size.width, 200);
 
     }
 }
@@ -321,7 +323,7 @@
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
     if (section == 0) {
-            return UIEdgeInsetsMake(20.0, 20.0, 40.0, 10.0);
+            return UIEdgeInsetsMake(-29, 20.0, 40.0, 10.0);
 
     }else{
         return UIEdgeInsetsMake(10.0, 20.0, 20.0, 10.0);
@@ -332,7 +334,7 @@
 // 设定头部标题的尺寸
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
 {
-    return CGSizeMake(UIScreen.mainScreen.bounds.size.width, 20);
+    return CGSizeMake(UIScreen.mainScreen.bounds.size.width, 22);
 }
 
 
