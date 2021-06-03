@@ -53,6 +53,7 @@
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     MeCollectionViewCell*cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellid" forIndexPath:indexPath];
     //分行进行布局
+    //头像等
     if(indexPath.section == 0){
         cell.iconimage.image = [UIImage imageNamed:@"icon"];
           cell.gradelabel.backgroundColor = [UIColor lightGrayColor];
@@ -79,6 +80,8 @@
             make.width.mas_equalTo(self.view.bounds.size.width-20);
         }];
     }
+    
+    //我的钱包
     if (indexPath.section == 1) {
        
         //整体按钮的位置
@@ -124,6 +127,8 @@
               cell.follow2.numlabel.font = [UIFont systemFontOfSize:18];
 
     }
+    
+    //返利合伙人
     if (indexPath.section == 2) {
      UIButton*btn = [[UIButton alloc] init];
          [btn setImage:[UIImage imageNamed:@"fanli1"] forState:UIControlStateNormal];
@@ -165,6 +170,8 @@
                     make.width.mas_equalTo(64.0);
                 }];
     }
+    
+    //乐寻互动
     if(indexPath.section == 3){
         UIButton*btn = [[UIButton alloc] init];
                 [btn setImage:[UIImage imageNamed:@"lexun1"] forState:UIControlStateNormal];
@@ -205,6 +212,49 @@
                            make.height.mas_equalTo(83.0);
                            make.width.mas_equalTo(170.0);
                        }];
+    }
+    
+    //招聘合伙人
+    if(indexPath.section == 4){
+        UIButton*btn = [[UIButton alloc] init];
+             [btn setImage:[UIImage imageNamed:@"zhaopin1"] forState:UIControlStateNormal];
+            [cell addSubview:btn];
+             [btn mas_remakeConstraints:^(MASConstraintMaker *make) {
+                 make.top.mas_equalTo(10);
+                 make.left.mas_equalTo(20.0);
+                 make.height.mas_equalTo(64.0);
+                 make.width.mas_equalTo(64.0);
+             }];
+            
+            UIButton*btn1 = [[UIButton alloc] init];
+                    [btn1 setImage:[UIImage imageNamed:@"zhaopin2"] forState:UIControlStateNormal];
+                   [cell addSubview:btn1];
+                    [btn1 mas_remakeConstraints:^(MASConstraintMaker *make) {
+                        make.top.mas_equalTo(10);
+                        make.left.mas_equalTo(btn.mas_right).offset(30);
+                        make.height.mas_equalTo(64.0);
+                        make.width.mas_equalTo(64.0);
+                    }];
+            
+        UIButton*btn2 = [[UIButton alloc] init];
+                [btn2 setImage:[UIImage imageNamed:@"zhaopin3"] forState:UIControlStateNormal];
+               [cell addSubview:btn2];
+                [btn2 mas_remakeConstraints:^(MASConstraintMaker *make) {
+                    make.top.mas_equalTo(10);
+                    make.left.mas_equalTo(btn1.mas_right).offset(30);
+                    make.height.mas_equalTo(64.0);
+                    make.width.mas_equalTo(64.0);
+                }];
+            
+            UIButton*btn3 = [[UIButton alloc] init];
+                    [btn3 setImage:[UIImage imageNamed:@"zhaopin4"] forState:UIControlStateNormal];
+                   [cell addSubview:btn3];
+                    [btn3 mas_remakeConstraints:^(MASConstraintMaker *make) {
+                        make.top.mas_equalTo(10);
+                        make.left.mas_equalTo(btn2.mas_right).offset(30);
+                        make.height.mas_equalTo(64.0);
+                        make.width.mas_equalTo(64.0);
+                    }];
     }
    
     return cell;
@@ -255,7 +305,7 @@
     if (indexPath.section == 1 ) {
             return CGSizeMake(UIScreen.mainScreen.bounds.size.width, 60);
 
-    }else if(indexPath.section == 2){
+    }else if(indexPath.section == 2 || indexPath.section == 4){
         return CGSizeMake(UIScreen.mainScreen.bounds.size.width, 100);
 
     }
