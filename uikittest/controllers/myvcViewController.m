@@ -131,6 +131,14 @@
     
     //返利合伙人
     if (indexPath.section == 2) {
+        [cell.iconimage removeFromSuperview];
+             [cell.follow removeFromSuperview];
+             [cell.follow1 removeFromSuperview];
+             [cell.follow2 removeFromSuperview];
+             [cell.follow3 removeFromSuperview];
+             [cell.namelabel removeFromSuperview];
+             [cell.gradelabel removeFromSuperview];
+        [cell.daybutton removeFromSuperview];
      UIButton*btn = [[UIButton alloc] init];
          [btn setImage:[UIImage imageNamed:@"fanli1"] forState:UIControlStateNormal];
         [cell addSubview:btn];
@@ -174,6 +182,15 @@
     
     //乐寻互动
     if(indexPath.section == 3){
+        [cell.daybutton removeFromSuperview];
+
+        [cell.iconimage removeFromSuperview];
+             [cell.follow removeFromSuperview];
+             [cell.follow1 removeFromSuperview];
+             [cell.follow2 removeFromSuperview];
+             [cell.follow3 removeFromSuperview];
+             [cell.namelabel removeFromSuperview];
+             [cell.gradelabel removeFromSuperview];
         UIButton*btn = [[UIButton alloc] init];
                 [btn setImage:[UIImage imageNamed:@"lexun1"] forState:UIControlStateNormal];
                [cell addSubview:btn];
@@ -217,6 +234,16 @@
     
     //招聘合伙人
     if(indexPath.section == 4){
+        //把不需要的view移除
+        [cell.daybutton removeFromSuperview];
+        [cell.iconimage removeFromSuperview];
+        [cell.follow removeFromSuperview];
+        [cell.follow1 removeFromSuperview];
+        [cell.follow2 removeFromSuperview];
+        [cell.follow3 removeFromSuperview];
+        [cell.namelabel removeFromSuperview];
+        [cell.gradelabel removeFromSuperview];
+        
         UIButton*btn = [[UIButton alloc] init];
              [btn setImage:[UIImage imageNamed:@"zhaopin1"] forState:UIControlStateNormal];
             [cell addSubview:btn];
@@ -256,6 +283,77 @@
                         make.height.mas_equalTo(64.0);
                         make.width.mas_equalTo(64.0);
                     }];
+    }
+    //我的工具
+    if (indexPath.section == 5) {
+           //把不需要的view移除
+             [cell.daybutton removeFromSuperview];
+             [cell.iconimage removeFromSuperview];
+             [cell.follow removeFromSuperview];
+             [cell.follow1 removeFromSuperview];
+             [cell.follow2 removeFromSuperview];
+             [cell.follow3 removeFromSuperview];
+             [cell.namelabel removeFromSuperview];
+             [cell.gradelabel removeFromSuperview];
+        
+        UIButton*btn = [[UIButton alloc] init];
+                   [btn setImage:[UIImage imageNamed:@"tools"] forState:UIControlStateNormal];
+                  [cell addSubview:btn];
+                   [btn mas_remakeConstraints:^(MASConstraintMaker *make) {
+                       make.top.mas_equalTo(10);
+                       make.left.mas_equalTo(20.0);
+                       make.height.mas_equalTo(64.0);
+                       make.width.mas_equalTo(64.0);
+                   }];
+                  
+                  UIButton*btn1 = [[UIButton alloc] init];
+                          [btn1 setImage:[UIImage imageNamed:@"tools2"] forState:UIControlStateNormal];
+                         [cell addSubview:btn1];
+                          [btn1 mas_remakeConstraints:^(MASConstraintMaker *make) {
+                              make.top.mas_equalTo(10);
+                              make.left.mas_equalTo(btn.mas_right).offset(30);
+                              make.height.mas_equalTo(64.0);
+                              make.width.mas_equalTo(64.0);
+                          }];
+                  
+              UIButton*btn2 = [[UIButton alloc] init];
+                      [btn2 setImage:[UIImage imageNamed:@"tools3"] forState:UIControlStateNormal];
+                     [cell addSubview:btn2];
+                      [btn2 mas_remakeConstraints:^(MASConstraintMaker *make) {
+                          make.top.mas_equalTo(10);
+                          make.left.mas_equalTo(btn1.mas_right).offset(30);
+                          make.height.mas_equalTo(64.0);
+                          make.width.mas_equalTo(64.0);
+                      }];
+                  
+                  UIButton*btn3 = [[UIButton alloc] init];
+                          [btn3 setImage:[UIImage imageNamed:@"tools4"] forState:UIControlStateNormal];
+                         [cell addSubview:btn3];
+                          [btn3 mas_remakeConstraints:^(MASConstraintMaker *make) {
+                              make.top.mas_equalTo(10);
+                              make.left.mas_equalTo(btn2.mas_right).offset(30);
+                              make.height.mas_equalTo(64.0);
+                              make.width.mas_equalTo(64.0);
+                          }];
+        
+        UIButton*btn4 = [[UIButton alloc] init];
+                                 [btn4 setImage:[UIImage imageNamed:@"tools5"] forState:UIControlStateNormal];
+                                [cell addSubview:btn4];
+                                 [btn4 mas_remakeConstraints:^(MASConstraintMaker *make) {
+                                     make.top.mas_equalTo(btn.mas_bottom).offset(15);
+                                     make.left.mas_equalTo(20);
+                                     make.height.mas_equalTo(64.0);
+                                     make.width.mas_equalTo(64.0);
+                                 }];
+        UIButton*btn5 = [[UIButton alloc] init];
+                                 [btn5 setImage:[UIImage imageNamed:@"tools6"] forState:UIControlStateNormal];
+                                [cell addSubview:btn5];
+                                 [btn5 mas_remakeConstraints:^(MASConstraintMaker *make) {
+                                     make.top.mas_equalTo(btn1.mas_bottom).offset(15);
+                                     make.left.mas_equalTo(btn4.mas_right).offset(30);
+                                     make.height.mas_equalTo(64.0);
+                                     make.width.mas_equalTo(64.0);
+                                 }];
     }
    
     return cell;

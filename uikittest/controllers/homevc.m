@@ -27,7 +27,9 @@
     self.scroview = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 44, UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.height-127)];
     self.scroview.indicatorStyle = UIScrollViewIndicatorStyleDefault;
     self.scroview.delegate = self;
-    self.scroview.contentSize = CGSizeMake(320, 460*3);
+    self.scroview.contentSize = CGSizeMake(320, 469*3);
+    [self.view addSubview:self.scroview];
+
     //下拉刷新
     MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [self requestdata];
@@ -46,11 +48,6 @@
     self.scroview.mj_header = header;
     [self.scroview.mj_header beginRefreshing];
 
-    [self.view addSubview:self.scroview];
-    UILabel *secondLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 800, 320, 40)];
-    secondLabel.backgroundColor = [UIColor yellowColor];
-    secondLabel.text = @"Next Label";
-    [self.scroview addSubview:secondLabel];
     [self setupui];
     [self setcollectview];
    
@@ -62,7 +59,6 @@
 
 //页面进行纯代码布局
 -(void) setupui{
-    UIRefreshControl *res = [[UIRefreshControl alloc] init];
     UISearchBar*sear = [[UISearchBar alloc] initWithFrame:CGRectMake(15, 0, UIScreen.mainScreen.bounds.size.width-80, 30)];
       sear.placeholder = @"每日答题";
     sear.layer.borderColor = [UIColor whiteColor].CGColor;
