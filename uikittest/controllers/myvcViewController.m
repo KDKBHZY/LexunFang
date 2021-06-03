@@ -165,6 +165,47 @@
                     make.width.mas_equalTo(64.0);
                 }];
     }
+    if(indexPath.section == 3){
+        UIButton*btn = [[UIButton alloc] init];
+                [btn setImage:[UIImage imageNamed:@"lexun1"] forState:UIControlStateNormal];
+               [cell addSubview:btn];
+                [btn mas_remakeConstraints:^(MASConstraintMaker *make) {
+                    make.top.mas_equalTo(10);
+                    make.left.mas_equalTo(10.0);
+                    make.height.mas_equalTo(83.0);
+                    make.width.mas_equalTo(170.0);
+                }];
+               
+               UIButton*btn1 = [[UIButton alloc] init];
+                       [btn1 setImage:[UIImage imageNamed:@"lexun2"] forState:UIControlStateNormal];
+                      [cell addSubview:btn1];
+                       [btn1 mas_remakeConstraints:^(MASConstraintMaker *make) {
+                           make.top.mas_equalTo(10);
+                           make.left.mas_equalTo(btn.mas_right).offset(10);
+                          make.height.mas_equalTo(83.0);
+                           make.width.mas_equalTo(170.0);
+                       }];
+               
+           UIButton*btn2 = [[UIButton alloc] init];
+                   [btn2 setImage:[UIImage imageNamed:@"lexun3"] forState:UIControlStateNormal];
+                  [cell addSubview:btn2];
+                   [btn2 mas_remakeConstraints:^(MASConstraintMaker *make) {
+                       make.top.mas_equalTo(btn.mas_bottom).offset(10);
+                       make.left.mas_equalTo(10);
+                      make.height.mas_equalTo(83.0);
+                       make.width.mas_equalTo(170.0);
+                   }];
+               
+               UIButton*btn3 = [[UIButton alloc] init];
+                       [btn3 setImage:[UIImage imageNamed:@"lexun4"] forState:UIControlStateNormal];
+                      [cell addSubview:btn3];
+                       [btn3 mas_remakeConstraints:^(MASConstraintMaker *make) {
+                           make.top.mas_equalTo(btn1.mas_bottom).offset(10);
+                           make.left.mas_equalTo(btn2.mas_right).offset(10);
+                           make.height.mas_equalTo(83.0);
+                           make.width.mas_equalTo(170.0);
+                       }];
+    }
    
     return cell;
 }
@@ -218,7 +259,9 @@
         return CGSizeMake(UIScreen.mainScreen.bounds.size.width, 100);
 
     }
-    else{
+    else if(indexPath.section == 3){
+         return CGSizeMake(UIScreen.mainScreen.bounds.size.width, 200);
+    }else{
         return CGSizeMake(UIScreen.mainScreen.bounds.size.width, 190);
 
     }
