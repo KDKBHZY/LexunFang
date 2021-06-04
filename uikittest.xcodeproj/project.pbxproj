@@ -10,6 +10,7 @@
 		81292E622669FFCC00CC897C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81292E602669FFCC00CC897C /* DetailViewController.m */; };
 		81292E632669FFCC00CC897C /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81292E612669FFCC00CC897C /* DetailViewController.xib */; };
 		81292E6C266A0DC700CC897C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81292E6E266A0DC700CC897C /* InfoPlist.strings */; };
+		81292E73266A130500CC897C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81292E75266A130500CC897C /* Localizable.strings */; };
 		8131616B264E4A0F009F9940 /* zytabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81316169264E1053009F9940 /* zytabbarController.m */; };
 		81529FCA2665C71500A84659 /* MeCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81529FC92665C71500A84659 /* MeCollectionReusableView.m */; };
 		81529FCD2665CB1600A84659 /* MeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81529FCC2665CB1600A84659 /* MeCollectionViewCell.m */; };
@@ -48,6 +49,9 @@
 		81292E6D266A0DC700CC897C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		81292E6F266A0DE000CC897C /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-HK"; path = "zh-HK.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		81292E70266A0E5800CC897C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		81292E74266A130500CC897C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		81292E76266A130900CC897C /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-HK"; path = "zh-HK.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		81292E77266A130B00CC897C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		81316168264E1053009F9940 /* zytabbarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zytabbarController.h; sourceTree = "<group>"; };
 		81316169264E1053009F9940 /* zytabbarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = zytabbarController.m; sourceTree = "<group>"; };
 		81529FC82665C71500A84659 /* MeCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeCollectionReusableView.h; sourceTree = "<group>"; };
@@ -177,6 +181,7 @@
 		81E950AA264A5FE70068E7CE = {
 			isa = PBXGroup;
 			children = (
+				81292E75266A130500CC897C /* Localizable.strings */,
 				81E950B5264A5FE70068E7CE /* uikittest */,
 				81E950B4264A5FE70068E7CE /* Products */,
 				23C25132F0645B6561B00799 /* Pods */,
@@ -291,6 +296,7 @@
 				81292E6C266A0DC700CC897C /* InfoPlist.strings in Resources */,
 				819EAED72657B5F600F589F1 /* JSHorizontalCollectionView.xib in Resources */,
 				81292E632669FFCC00CC897C /* DetailViewController.xib in Resources */,
+				81292E73266A130500CC897C /* Localizable.strings in Resources */,
 				81E950C3264A5FE90068E7CE /* Assets.xcassets in Resources */,
 				819EAEDA2657B5F600F589F1 /* JSHorizontalBottomCollectionViewCell.xib in Resources */,
 				817E1792265CDDCE004AA1BD /* MyTableViewCell.xib in Resources */,
@@ -382,6 +388,16 @@
 				81292E70266A0E5800CC897C /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		81292E75266A130500CC897C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				81292E74266A130500CC897C /* zh-Hans */,
+				81292E76266A130900CC897C /* zh-HK */,
+				81292E77266A130B00CC897C /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		81E950C4264A5FE90068E7CE /* LaunchScreen.storyboard */ = {

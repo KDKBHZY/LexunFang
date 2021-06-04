@@ -42,10 +42,13 @@
 }
 
 -(void)addchildviewcontrollers{
+    NSString*hometitle = NSLocalizedString(@"首页",nil);
+    NSString*metitle = NSLocalizedString(@"我的",nil);
+
     [[UITabBar appearance] setBackgroundColor:UIColor.whiteColor];
        [[UITabBar appearance] setTintColor:UIColor.blackColor ];
          homevc *homevc1 = [[homevc alloc] init];
-          [self setupOneChildViewController:homevc1 title:@"首页" col:UIColor.whiteColor image:@"Home_normal" selectedImage:@"Home_selected"];
+          [self setupOneChildViewController:homevc1 title:hometitle col:UIColor.whiteColor image:@"Home_normal" selectedImage:@"Home_selected"];
      //  [tab1 addChildViewController:homevc1];
     [self addChildViewController:homevc1];
           findvcViewController* findvc = [[findvcViewController alloc] init];
@@ -61,7 +64,7 @@
        [self addChildViewController:mesvc];
 
           myvcViewController* myvc = [[myvcViewController alloc] init];
-          [self setupOneChildViewController:myvc title:@"我的" col:UIColor.whiteColor image:@"wd" selectedImage:@"wd_selected"];
+          [self setupOneChildViewController:myvc title:metitle col:UIColor.whiteColor image:@"wd" selectedImage:@"wd_selected"];
        [self addChildViewController:myvc];
        //[self.window setRootViewController:tab];
 
