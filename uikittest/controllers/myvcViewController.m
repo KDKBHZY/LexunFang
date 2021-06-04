@@ -295,7 +295,6 @@
              [cell.follow3 removeFromSuperview];
              [cell.namelabel removeFromSuperview];
              [cell.gradelabel removeFromSuperview];
-        
         UIButton*btn = [[UIButton alloc] init];
                    [btn setImage:[UIImage imageNamed:@"tools"] forState:UIControlStateNormal];
                   [cell addSubview:btn];
