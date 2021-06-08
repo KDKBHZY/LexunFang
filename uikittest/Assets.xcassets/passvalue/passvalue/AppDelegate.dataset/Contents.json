@@ -1,0 +1,12 @@
+{
+  "data" : [
+    {
+      "filename" : "AppDelegate.m",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

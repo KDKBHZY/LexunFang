@@ -1,0 +1,12 @@
+{
+  "data" : [
+    {
+      "filename" : "NSBezierPath+SDRoundedCorners.h",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

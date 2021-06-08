@@ -1,0 +1,12 @@
+{
+  "data" : [
+    {
+      "filename" : "NSBundle+MJRefresh.h",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

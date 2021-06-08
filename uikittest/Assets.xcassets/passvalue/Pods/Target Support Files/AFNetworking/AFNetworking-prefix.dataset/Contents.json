@@ -1,0 +1,12 @@
+{
+  "data" : [
+    {
+      "filename" : "AFNetworking-prefix.pch",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

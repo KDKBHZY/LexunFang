@@ -13,7 +13,8 @@
 -(instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-         [self registerNib:[ UINib nibWithNibName:@"MyTableViewCell" bundle:nil ] forCellReuseIdentifier:@"mycell"];                self.delegate = self;
+         [self registerNib:[ UINib nibWithNibName:@"MyTableViewCell" bundle:nil ] forCellReuseIdentifier:@"mycell"];
+        self.delegate = self;
               self.dataSource = self;
         //禁止tablevie滚动
         self.scrollEnabled = NO;

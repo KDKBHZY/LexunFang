@@ -1,0 +1,6 @@
+platform :ios, '8.0'
+target:'passvalue' do
+pod ‘AFNetworking’, ‘~>2.0’
+pod 'MJRefresh'
+pod 'SDWebImage'
+end

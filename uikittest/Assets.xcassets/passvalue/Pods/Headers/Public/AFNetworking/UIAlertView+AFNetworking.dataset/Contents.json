@@ -1,0 +1,12 @@
+{
+  "data" : [
+    {
+      "filename" : "UIAlertView+AFNetworking.h",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

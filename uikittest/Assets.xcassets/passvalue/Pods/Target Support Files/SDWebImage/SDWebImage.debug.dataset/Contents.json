@@ -1,0 +1,12 @@
+{
+  "data" : [
+    {
+      "filename" : "SDWebImage.debug.xcconfig",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
