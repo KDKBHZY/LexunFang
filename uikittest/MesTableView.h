@@ -11,6 +11,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MesTableView : UITableView<UITableViewDelegate,UITableViewDataSource>
+@property NSArray* titlarray;
+@property NSArray* textarray;
+
 
 @end
 

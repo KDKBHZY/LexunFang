@@ -13,6 +13,9 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        self.titlarray = @[@"系统公告",@"乐寻访小乐乐",@"乐寻访小助手"];
+        self.textarray = @[@"关于TBC公告",@"非常高兴在乐寻访遇到大家。任何意见",@"乐寻访App使用中任何问题"];
+
         self.delegate = self;
         self.dataSource = self;
         [self registerClass:[MesTableViewCell class] forCellReuseIdentifier:@"cell"];
@@ -22,13 +25,14 @@
 }
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     UITableViewCell*cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    cell.textLabel.text = @"消息";
+    cell.textLabel.text = [self.titlarray objectAtIndex:indexPath.row];
     cell.imageView.image = [UIImage imageNamed:@"icon"];
+    cell.detailTextLabel.text = [self.textarray objectAtIndex:indexPath.row];
     return cell;
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return self.titlarray.count;
 }
 
 
