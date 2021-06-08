@@ -60,7 +60,7 @@
           [self addChildViewController:btc];
 
          mesvcViewController* mesvc = [[mesvcViewController alloc] init];
-          [self setupOneChildViewController:mesvc title:@"消息" col:UIColor.blueColor image:@"message" selectedImage:@"message_selected"];
+          [self setupOneChildViewController:mesvc title:@"消息" col:UIColor.clearColor image:@"message" selectedImage:@"message_selected"];
        [self addChildViewController:mesvc];
 
           myvcViewController* myvc = [[myvcViewController alloc] init];

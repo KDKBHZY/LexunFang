@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface mesvcViewController : UIViewController
-
+@property UICollectionView*collectionview;
 @end
 
 NS_ASSUME_NONNULL_END
