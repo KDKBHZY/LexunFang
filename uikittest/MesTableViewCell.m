@@ -2,7 +2,7 @@
 //  MesTableViewCell.m
 //  uikittest
 //
-//  Created by formssi on 2021/6/8.
+//  Created by formssi on 2021/6/10.
 //  Copyright © 2021 formssi. All rights reserved.
 //
 
@@ -10,12 +10,15 @@
 
 @implementation MesTableViewCell
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        NSLog(@"成功");
-    }
-    return self;
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    // Initialization code
 }
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+
+    // Configure the view for the selected state
+}
+
 @end

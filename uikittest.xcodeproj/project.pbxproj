@@ -16,7 +16,6 @@
 		81529FCD2665CB1600A84659 /* MeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81529FCC2665CB1600A84659 /* MeCollectionViewCell.m */; };
 		81529FD02666334F00A84659 /* Followbtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 81529FCF2666334F00A84659 /* Followbtn.m */; };
 		81565B16266F66C800301C2B /* MesTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81565B15266F66C800301C2B /* MesTableView.m */; };
-		81565B19266F6CE200301C2B /* MesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81565B18266F6CE200301C2B /* MesTableViewCell.m */; };
 		815D4A3F265BA7EA007A2AA4 /* myableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 815D4A3E265BA7EA007A2AA4 /* myableView.m */; };
 		81644E43264CBC280090A326 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81644E42264CBC280090A326 /* CollectionViewCell.m */; };
 		8164D71F264B7F4A004FA4AB /* homevc.m in Sources */ = {isa = PBXBuildFile; fileRef = 8164D71E264B7F4A004FA4AB /* homevc.m */; };
@@ -26,6 +25,8 @@
 		8164D72C264BC34A004FA4AB /* LoopPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8164D72B264BC34A004FA4AB /* LoopPlayView.m */; };
 		817E1791265CDDCE004AA1BD /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 817E178F265CDDCE004AA1BD /* MyTableViewCell.m */; };
 		817E1792265CDDCE004AA1BD /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 817E1790265CDDCE004AA1BD /* MyTableViewCell.xib */; };
+		819CEA1026720E6F00A37F37 /* MesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 819CEA0E26720E6F00A37F37 /* MesTableViewCell.m */; };
+		819CEA1126720E6F00A37F37 /* MesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 819CEA0F26720E6F00A37F37 /* MesTableViewCell.xib */; };
 		819EAED62657B5F600F589F1 /* JSHorizontalCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 819EAECC2657B5F600F589F1 /* JSHorizontalCollectionView.m */; };
 		819EAED72657B5F600F589F1 /* JSHorizontalCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 819EAECD2657B5F600F589F1 /* JSHorizontalCollectionView.xib */; };
 		819EAED82657B5F600F589F1 /* JSHorizontalBottomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 819EAECF2657B5F600F589F1 /* JSHorizontalBottomCollectionViewCell.m */; };
@@ -64,8 +65,6 @@
 		81529FCF2666334F00A84659 /* Followbtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Followbtn.m; sourceTree = "<group>"; };
 		81565B14266F66C800301C2B /* MesTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MesTableView.h; sourceTree = "<group>"; };
 		81565B15266F66C800301C2B /* MesTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MesTableView.m; sourceTree = "<group>"; };
-		81565B17266F6CE200301C2B /* MesTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MesTableViewCell.h; sourceTree = "<group>"; };
-		81565B18266F6CE200301C2B /* MesTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MesTableViewCell.m; sourceTree = "<group>"; };
 		815D4A3D265BA7EA007A2AA4 /* myableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = myableView.h; sourceTree = "<group>"; };
 		815D4A3E265BA7EA007A2AA4 /* myableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myableView.m; sourceTree = "<group>"; };
 		81644E41264CBC280090A326 /* CollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
@@ -83,6 +82,9 @@
 		817E178E265CDDCE004AA1BD /* MyTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTableViewCell.h; sourceTree = "<group>"; };
 		817E178F265CDDCE004AA1BD /* MyTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTableViewCell.m; sourceTree = "<group>"; };
 		817E1790265CDDCE004AA1BD /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
+		819CEA0D26720E6F00A37F37 /* MesTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MesTableViewCell.h; sourceTree = "<group>"; };
+		819CEA0E26720E6F00A37F37 /* MesTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MesTableViewCell.m; sourceTree = "<group>"; };
+		819CEA0F26720E6F00A37F37 /* MesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MesTableViewCell.xib; sourceTree = "<group>"; };
 		819EAECC2657B5F600F589F1 /* JSHorizontalCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSHorizontalCollectionView.m; sourceTree = "<group>"; };
 		819EAECD2657B5F600F589F1 /* JSHorizontalCollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSHorizontalCollectionView.xib; sourceTree = "<group>"; };
 		819EAECF2657B5F600F589F1 /* JSHorizontalBottomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSHorizontalBottomCollectionViewCell.m; sourceTree = "<group>"; };
@@ -227,8 +229,9 @@
 				81529FCF2666334F00A84659 /* Followbtn.m */,
 				81565B14266F66C800301C2B /* MesTableView.h */,
 				81565B15266F66C800301C2B /* MesTableView.m */,
-				81565B17266F6CE200301C2B /* MesTableViewCell.h */,
-				81565B18266F6CE200301C2B /* MesTableViewCell.m */,
+				819CEA0D26720E6F00A37F37 /* MesTableViewCell.h */,
+				819CEA0E26720E6F00A37F37 /* MesTableViewCell.m */,
+				819CEA0F26720E6F00A37F37 /* MesTableViewCell.xib */,
 			);
 			path = uikittest;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				819EAEDA2657B5F600F589F1 /* JSHorizontalBottomCollectionViewCell.xib in Resources */,
 				817E1792265CDDCE004AA1BD /* MyTableViewCell.xib in Resources */,
 				819EAEDB2657B5F600F589F1 /* JSHorizontalTopCollectionViewCell.xib in Resources */,
+				819CEA1126720E6F00A37F37 /* MesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,7 +378,7 @@
 				81C11B9F26520AC50065B67F /* myCollectionView.m in Sources */,
 				81E950B8264A5FE70068E7CE /* AppDelegate.m in Sources */,
 				81529FCA2665C71500A84659 /* MeCollectionReusableView.m in Sources */,
-				81565B19266F6CE200301C2B /* MesTableViewCell.m in Sources */,
+				819CEA1026720E6F00A37F37 /* MesTableViewCell.m in Sources */,
 				8164D726264BB435004FA4AB /* mesvcViewController.m in Sources */,
 				819EAED92657B5F600F589F1 /* JSHorizontalTopCollectionViewCell.m in Sources */,
 				81529FCD2665CB1600A84659 /* MeCollectionViewCell.m in Sources */,

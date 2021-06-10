@@ -18,13 +18,14 @@
 
         self.delegate = self;
         self.dataSource = self;
-        [self registerClass:[MesTableViewCell class] forCellReuseIdentifier:@"cell"];
+         [self registerNib:[ UINib nibWithNibName:@"MesTableViewCell" bundle:nil ] forCellReuseIdentifier:@"cell1"];
+        
             }
     
     return self;
 }
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    UITableViewCell*cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    MesTableViewCell*cell = [tableView dequeueReusableCellWithIdentifier:@"cell1" forIndexPath:indexPath];
     cell.textLabel.text = [self.titlarray objectAtIndex:indexPath.row];
     cell.imageView.image = [UIImage imageNamed:@"icon"];
     cell.detailTextLabel.text = [self.textarray objectAtIndex:indexPath.row];
@@ -34,6 +35,8 @@
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.titlarray.count;
 }
-
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 70;
+}
 
 @end
