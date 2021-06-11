@@ -18,7 +18,7 @@
    // self.num = (int)self.like1.currentTitle;
     self.num = 10;
 
-    NSLog(@"%@",[NSString stringWithFormat:@"%@",self.like1.currentAttributedTitle ]);
+   // NSLog(@"%@",[NSString stringWithFormat:@"%@",self.like1.currentAttributedTitle ]);
 }
 - (IBAction)like:(id)sender {
      

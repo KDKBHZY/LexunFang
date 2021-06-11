@@ -161,6 +161,9 @@
 				819EAECD2657B5F600F589F1 /* JSHorizontalCollectionView.xib */,
 				819EAECE2657B5F600F589F1 /* View */,
 				819EAED52657B5F600F589F1 /* JSHorizontalCollectionView.h */,
+				81292E5F2669FFCC00CC897C /* DetailViewController.h */,
+				81292E602669FFCC00CC897C /* DetailViewController.m */,
+				81292E612669FFCC00CC897C /* DetailViewController.xib */,
 				815D4A3D265BA7EA007A2AA4 /* myableView.h */,
 				815D4A3E265BA7EA007A2AA4 /* myableView.m */,
 				817E178E265CDDCE004AA1BD /* MyTableViewCell.h */,
@@ -179,9 +182,6 @@
 				819EAED22657B5F600F589F1 /* JSHorizontalTopCollectionViewCell.h */,
 				819EAED32657B5F600F589F1 /* JSHorizontalBottomCollectionViewCell.h */,
 				819EAED42657B5F600F589F1 /* JSHorizontalTopCollectionViewCell.xib */,
-				81292E5F2669FFCC00CC897C /* DetailViewController.h */,
-				81292E602669FFCC00CC897C /* DetailViewController.m */,
-				81292E612669FFCC00CC897C /* DetailViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";

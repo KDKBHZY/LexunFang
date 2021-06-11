@@ -14,7 +14,7 @@
 #import "MJRefresh.h"
 #import "JSHorizontalCollectionView.h"
 #import "myableView.h"
-@interface homevc ()<UICollectionViewDelegate,UICollectionViewDataSource>
+@interface homevc ()<UICollectionViewDelegate,UICollectionViewDataSource,UIGestureRecognizerDelegate>
 
 @end
 
@@ -70,6 +70,9 @@
     //点击空白回收键盘
     //添加手势
     UITapGestureRecognizer* tap1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(fingerta:)];
+    tap1.delegate = self;
+    tap1.numberOfTapsRequired = 1;
+
     [self.scroview addGestureRecognizer:tap1];
     //添加扫码按钮
       UIImageView*img = [[UIImageView alloc] initWithFrame:CGRectMake(325, 0, 30, 30)];
@@ -178,8 +181,18 @@
 -(void) scan{
     NSLog(@"扫码");
 }
-
-
+//判断点击事件的对象，解决tableview的didselect方法无效的bug
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+{
+    // 输出点击的view的类名
+   // NSLog(@"^ 1 1^^%@", NSStringFromClass([touch.view class]));
+    
+    // 若为UITableViewCellContentView（即点击了tableViewCell），则不截获Touch事件
+    if ([NSStringFromClass([touch.view class]) isEqualToString:@"UITableViewCellContentView"]) {
+        return NO;
+    }
+    return  YES;
+}
 
 
 @end

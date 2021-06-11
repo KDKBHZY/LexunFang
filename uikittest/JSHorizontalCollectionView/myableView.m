@@ -8,6 +8,7 @@
 
 #import "myableView.h"
 #import "myTableViewCell.h"
+#import "DetailViewController.h"
 @implementation myableView
 
 -(instancetype)initWithFrame:(CGRect)frame {
@@ -18,8 +19,8 @@
               self.dataSource = self;
         //禁止tablevie滚动
         self.scrollEnabled = NO;
-        self.allowsSelection = NO;
-        self.allowsSelectionDuringEditing = NO;
+        self.allowsSelection = YES;
+        self.allowsSelectionDuringEditing = YES;
         
     }
     return self;
@@ -37,6 +38,7 @@
 {
     return 20.;
 }
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 6;
@@ -56,7 +58,13 @@
     return 1;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    NSLog(@"成功");
+
+    DetailViewController*devc = [[DetailViewController alloc] init];
+
+    [self.inputViewController presentViewController:devc animated:YES completion:^{
+        NSLog(@"成功");
+    }];
 }
 
 

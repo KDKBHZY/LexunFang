@@ -121,6 +121,10 @@
                     <constraint firstAttribute="bottom" secondItem="5QW-Ix-BJF" secondAttribute="bottom" constant="4" id="uxx-1a-VbD"/>
                 </constraints>
             </tableViewCellContentView>
+            <accessibility key="accessibilityConfiguration">
+                <accessibilityTraits key="traits" none="YES"/>
+                <bool key="isElement" value="YES"/>
+            </accessibility>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
                 <outlet property="context" destination="lia-RL-0MR" id="6Xn-B8-cHI"/>
@@ -129,7 +133,7 @@
                 <outlet property="nametext" destination="sDO-xi-5fw" id="j66-Ph-I7l"/>
                 <outlet property="slogan" destination="a9f-v8-Rne" id="zP2-a9-dsU"/>
             </connections>
-            <point key="canvasLocation" x="-42" y="167"/>
+            <point key="canvasLocation" x="30" y="155"/>
         </tableViewCell>
     </objects>
     <resources>
