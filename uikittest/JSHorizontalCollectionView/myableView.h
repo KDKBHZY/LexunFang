@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface myableView : UITableView<UITableViewDelegate,UITableViewDataSource>
-
+@property NSArray*arr;
 @end
 
 NS_ASSUME_NONNULL_END

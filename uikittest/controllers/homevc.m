@@ -14,8 +14,10 @@
 #import "MJRefresh.h"
 #import "JSHorizontalCollectionView.h"
 #import "myableView.h"
-@interface homevc ()<UICollectionViewDelegate,UICollectionViewDataSource,UIGestureRecognizerDelegate>
+#import "DetailViewController.h"
 
+@interface homevc ()<UICollectionViewDelegate,UICollectionViewDataSource,UIGestureRecognizerDelegate,UITableViewDelegate>
+@property   myableView *tmpTableView;
 @end
 
 @implementation homevc
@@ -104,9 +106,9 @@
     NSMutableArray *tmpViewArray = [NSMutableArray arrayWithCapacity:0];
     for (int i = 0; i < tmpArray.count; ++i) {
         //贴scrollview
-       myableView *tmpScrollView = [[myableView alloc] initWithFrame:CGRectMake(20, 335, 335, 780)];
-
-        [tmpViewArray addObject:tmpScrollView];
+        self.tmpTableView = [[myableView alloc] initWithFrame:CGRectMake(20, 335, 335, 780)];
+       self.tmpTableView.delegate = self;
+        [tmpViewArray addObject: self.tmpTableView];
     }
     
     JSHorizontalCollectionView *tmpView = [JSHorizontalCollectionView horizontalCollectionViewWithTitleArray:tmpArray ViewArray:tmpViewArray];
@@ -194,5 +196,17 @@
     return  YES;
 }
 
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    DetailViewController*devc = [[DetailViewController alloc] init];
+    //全屏显示
+    devc.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self presentViewController:devc animated:YES completion:^{
+        NSLog(@"成功%ld",(long)indexPath.section);
+        devc.contitle.text = [self.tmpTableView.arr objectAtIndex:indexPath.section];
+        
+    }];
+}
 
 @end

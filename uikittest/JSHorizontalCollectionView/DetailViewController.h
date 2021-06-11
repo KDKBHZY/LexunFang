@@ -11,6 +11,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DetailViewController : ViewController
+@property (weak, nonatomic) IBOutlet UINavigationItem *navititle;
+@property (weak, nonatomic) IBOutlet UITextView *context;
+@property (weak, nonatomic) IBOutlet UIImageView *iconview;
+@property (weak, nonatomic) IBOutlet UIImageView *contextimage;
+@property (weak, nonatomic) IBOutlet UILabel *contitle;
 
 @end
 

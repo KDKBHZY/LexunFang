@@ -15,13 +15,14 @@
     self = [super initWithFrame:frame];
     if (self) {
          [self registerNib:[ UINib nibWithNibName:@"MyTableViewCell" bundle:nil ] forCellReuseIdentifier:@"mycell"];
-        self.delegate = self;
+       // self.delegate = self;
               self.dataSource = self;
         //禁止tablevie滚动
         self.scrollEnabled = NO;
         self.allowsSelection = YES;
         self.allowsSelectionDuringEditing = YES;
-        
+        self.arr = @[@"btc",@"eth",@"doge",@"ht",@"dot",@"uni"];
+
     }
     return self;
 }
@@ -44,27 +45,17 @@
     return 6;
 }
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    NSArray*arr = @[@"btc",@"eth",@"doge",@"ht",@"dot",@"uni"];
     MyTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"mycell"];
-    cell.nametext.text = [arr objectAtIndex:indexPath.section];
+    cell.nametext.text = [self.arr objectAtIndex:indexPath.section];
     cell.slogan.text = @"翘起地球的动态";
     cell.icon.image = [UIImage imageNamed:@"my1"];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
-    return cell;;
+    return cell;
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 1;
-}
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"成功");
-
-    DetailViewController*devc = [[DetailViewController alloc] init];
-
-    [self.inputViewController presentViewController:devc animated:YES completion:^{
-        NSLog(@"成功");
-    }];
 }
 
 
