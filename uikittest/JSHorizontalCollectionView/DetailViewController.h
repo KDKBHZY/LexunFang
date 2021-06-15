@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIImageView *iconview;
 @property (weak, nonatomic) IBOutlet UIImageView *contextimage;
 @property (weak, nonatomic) IBOutlet UILabel *contitle;
+@property (weak, nonatomic) IBOutlet UIButton *followBtn;
 
 @end
 

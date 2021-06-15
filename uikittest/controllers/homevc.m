@@ -105,14 +105,14 @@
     
     NSMutableArray *tmpViewArray = [NSMutableArray arrayWithCapacity:0];
     for (int i = 0; i < tmpArray.count; ++i) {
-        //贴scrollview
-        self.tmpTableView = [[myableView alloc] initWithFrame:CGRectMake(20, 335, 335, 780)];
+ 
+        self.tmpTableView = [[myableView alloc] initWithFrame:CGRectMake(20, 0, 335,900)];
        self.tmpTableView.delegate = self;
         [tmpViewArray addObject: self.tmpTableView];
     }
     
     JSHorizontalCollectionView *tmpView = [JSHorizontalCollectionView horizontalCollectionViewWithTitleArray:tmpArray ViewArray:tmpViewArray];
-    tmpView.frame = CGRectMake(0, 450, self.view.bounds.size.width, 800);
+    tmpView.frame = CGRectMake(0, 450, self.view.bounds.size.width, 900);
     [self.scroview addSubview:tmpView];
 }
 
@@ -208,5 +208,15 @@
         
     }];
 }
-
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *headerView = [[UIView alloc] init];
+    headerView.backgroundColor = [UIColor clearColor];
+    return headerView;
+}
+//设置headerview的高度，也就是cell的间距
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 20.;
+}
 @end

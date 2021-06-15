@@ -47,12 +47,12 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="WwX-J9-aLQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="KEX-cw-Bzm"/>
-                <constraint firstItem="bm9-cJ-g9C" firstAttribute="trailing" secondItem="WwX-J9-aLQ" secondAttribute="trailing" id="R5a-nq-v3K"/>
+                <constraint firstAttribute="bottom" secondItem="bm9-cJ-g9C" secondAttribute="bottom" constant="18" id="LwC-V3-Tle"/>
+                <constraint firstAttribute="trailing" secondItem="bm9-cJ-g9C" secondAttribute="trailing" id="MeQ-FH-zaF"/>
                 <constraint firstItem="WwX-J9-aLQ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="bCb-IV-AW3"/>
+                <constraint firstItem="bm9-cJ-g9C" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="iC6-8c-cxV"/>
                 <constraint firstItem="WwX-J9-aLQ" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="nbw-3M-ING"/>
-                <constraint firstItem="bm9-cJ-g9C" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xLa-LW-ey4"/>
-                <constraint firstAttribute="bottom" secondItem="bm9-cJ-g9C" secondAttribute="bottom" constant="18" id="y2l-E4-LY8"/>
-                <constraint firstItem="bm9-cJ-g9C" firstAttribute="top" secondItem="WwX-J9-aLQ" secondAttribute="bottom" constant="8" id="zJt-R4-xUC"/>
+                <constraint firstItem="bm9-cJ-g9C" firstAttribute="top" secondItem="WwX-J9-aLQ" secondAttribute="bottom" constant="8" id="wb0-CC-a6Y"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>

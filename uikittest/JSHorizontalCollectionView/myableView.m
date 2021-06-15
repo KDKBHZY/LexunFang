@@ -28,17 +28,7 @@
 }
 
 //设置一个headerview来使cell有间隔
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-{
-    UIView *headerView = [[UIView alloc] init];
-    headerView.backgroundColor = [UIColor clearColor];
-    return headerView;
-}
-//设置headerview的高度，也就是cell的间距
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    return 20.;
-}
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
